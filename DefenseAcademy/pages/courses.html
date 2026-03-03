@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Defense Academy - Courses and training programs for cyber and OT resilience">
+  <title>Courses - Defense Academy</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="navbar" role="banner">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-logo" aria-label="Defense Academy home">
+        <img src="../images/defense-academy-logo-white.png" alt="Defense Academy" class="logo">
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu" aria-label="Navigation">
+        <a href="../pages/courses.html" class="nav-link">Courses</a>
+        <a href="../index.html#approach" class="nav-link">Approach</a>
+        <a href="../index.html#services" class="nav-link">Services</a>
+        <a href="../index.html#contact" class="nav-link nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <img src="../images/hero.png" alt="Defense Academy - Courses" class="hero-image">
+      <div class="hero-content">
+        <h1 id="hero-title">Professional training for operational resilience</h1>
+        <p class="hero-subtitle">Develop expertise in cyber and OT security through Defense Academy's comprehensive course offerings designed for critical infrastructure organizations.</p>
+        <a href="../index.html#contact" class="btn btn-primary">Enquire about courses</a>
+      </div>
+    </section>
+
+    <section class="courses-section" id="courses" aria-labelledby="courses-title">
+      <div class="container">
+        <h2 id="courses-title">Our course offerings</h2>
+        <p class="section-intro">Defense Academy delivers specialized training programs tailored to your organizational needs. Each course can be delivered as standalone training or integrated into a comprehensive resilience programme.</p>
+        
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-badge">Assessment</div>
+            <h3>Operational resilience assessments</h3>
+            <p>Structured engagements to define and validate minimum viable business or mission, critical process dependencies, system recovery priorities, and escalation/authority structures.</p>
+            <p class="course-duration"><strong>Duration:</strong> 6-8 weeks</p>
+            <a href="../index.html#contact" class="course-link">Learn more →</a>
+          </div>
+
+          <div class="course-card">
+            <div class="course-badge">Training</div>
+            <h3>Custom training programmes</h3>
+            <p>In-house programmes tailored to your operational model, including OT security for industrial environments, incident response in converged IT/OT systems, executive crisis decision making, and regulatory alignment.</p>
+            <p class="course-duration"><strong>Duration:</strong> 1-5 days (customizable)</p>
+            <a href="../index.html#contact" class="course-link">Learn more →</a>
+          </div>
+
+          <div class="course-card">
+            <div class="course-badge">Exercises</div>
+            <h3>Tabletop exercises & crisis simulations</h3>
+            <p>Scenario-driven exercises designed to test protection of minimum viable operation, decision quality under uncertainty, cross-functional coordination, external communication, and regulatory response.</p>
+            <p class="course-duration"><strong>Duration:</strong> 1-3 days</p>
+            <a href="../index.html#contact" class="course-link">Learn more →</a>
+          </div>
+
+          <div class="course-card">
+            <div class="course-badge">E-Learning</div>
+            <h3>Custom e-learning modules</h3>
+            <p>Scenario-based modules aligned to your operational environment and resilience priorities, deployed across onboarding, refresher cycles, and role-specific reinforcement. Engagements range from targeted standalone modules to fully integrated capability programs that institutionalize resilience across the organization.</p>
+            <p class="course-duration"><strong>Duration:</strong> Self-paced </p>
+            <a href="../index.html#contact" class="course-link">Learn more →</a>
+          </div>
+
+          <div class="course-card">
+            <div class="course-badge">Advisory</div>
+            <h3>Advisory & transformation</h3>
+            <p>Support in converting assessments and exercises into concrete changes in governance, architecture, and operating models, grounded in ISO 27001, IEC 62443, NIST CSF 2.0, CIS Controls, and threat-informed practices such as MITRE ATT&CK. This can be delivered as targeted advisory, program leadership, or CISO-as-a-Service, providing embedded executive accountability and direction where required.</p>
+            <p class="course-duration"><strong>Duration:</strong> Ongoing engagement</p>
+            <a href="../index.html#contact" class="course-link">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to strengthen your operational resilience?</h2>
+        <p>Contact Defense Academy to discuss which courses and programmes are right for your organization.</p>
+        <a href="../index.html#contact" class="btn btn-primary">Contact us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <form action="https://formspree.io/f/xkovdowg" method="POST" class="contact-form">
+          <h3>Contact us</h3>
+          <div class="field-group">
+            <label for="first-name">First name *</label>
+            <input type="text" id="first-name" name="first_name" required autocomplete="given-name">
+          </div>
+          <div class="field-group">
+            <label for="last-name">Last name *</label>
+            <input type="text" id="last-name" name="last_name" required autocomplete="family-name">
+          </div>
+          <div class="field-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="field-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="field-group">
+            <label for="reason">Reason for contact *</label>
+            <select id="reason" name="reason" required>
+              <option value="">Please select</option>
+              <option value="training">Training</option>
+              <option value="consulting">Consulting</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="field-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <p class="privacy-text">We're committed to your privacy and use the information you provide to contact you about our relevant content, products and services. You may unsubscribe from these communications at any time. For more information, check out our <a href="#">Privacy Policy</a>.</p>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-left">Made in Europe</span>
+        <span class="footer-right">&copy; 2026 DefenseAcademy B.V. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
