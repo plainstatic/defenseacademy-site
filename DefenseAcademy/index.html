@@ -140,7 +140,15 @@
           </div>
           <div class="field-group">
             <label for="phone">Phone number</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel">
+            <input
+  type="tel"
+  id="phone"
+  name="phone"
+  required
+  minlength="8"
+  maxlength="16"
+  pattern="^\+?[1-9][0-9\s]{7,14}$"
+  placeholder="+31 6 12345678">
           </div>
           <div class="field-group">
             <label for="reason">Reason for contact *</label>
