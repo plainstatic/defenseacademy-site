@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Defense Academy - Responsible Disclosure Policy and Vulnerability Reporting">
+  <title>Responsible Disclosure - Defense Academy</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="navbar" role="banner">
+    <div class="navbar-container">
+      <a href="../index.html" class="navbar-logo" aria-label="Defense Academy home">
+        <img src="../images/defense-academy-logo-white.png" alt="Defense Academy" class="logo">
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu" aria-label="Navigation">
+        <a href="../pages/courses.html" class="nav-link">Courses</a>
+        <a href="../index.html#approach" class="nav-link">Approach</a>
+        <a href="../index.html#services" class="nav-link">Services</a>
+        <a href="../index.html#contact" class="nav-link nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <img src="../images/hero.png" alt="Defense Academy - Responsible Disclosure" class="hero-image">
+      <div class="hero-content">
+        <h1 id="hero-title">Responsible Disclosure</h1>
+        <p class="hero-subtitle">Help us keep our systems secure by responsibly reporting vulnerabilities through our coordinated vulnerability disclosure program. <br>Please read this before submitting your report.</br></p>
+      </div>
+    </section>
+
+    <section class="disclosure-section" id="disclosure" aria-labelledby="disclosure-intro">
+      <div class="container">
+        <p class="section-intro" id="disclosure-intro">We make every effort to keep our systems secure. Still find a problem in our security? Please report it so we can fix it right away. We call this reporting a vulnerability disclosure (also known as coordinated vulnerability disclosure and responsible disclosure).</p>
+      </div>
+    </section>
+
+    <section class="reporting-section">
+      <div class="container">
+        <h2>How do you report a problem?</h2>
+        <p>Send it to us via our <a href="https://defenseacademy.eu/#contact">Contact Us form</a>.</p>
+        
+        <div class="disclosure-list">
+          <div class="disclosure-item">
+            <div class="disclosure-number">1</div>
+            <div class="disclosure-content">
+              <h3>Provide detailed information</h3>
+              <p>Give us as much information as possible; that will help us reproduce and solve the problem. Provide us with a detailed description with IP addresses, logs, screenshots, etc.</p>
+            </div>
+          </div>
+          <div class="disclosure-item">
+            <div class="disclosure-number">2</div>
+            <div class="disclosure-content">
+              <h3>Include your contact information</h3>
+              <p>Give us your contact information, a phone number or a mailing address. This enables us to reach you if we want to know more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guidelines-section">
+      <div class="container">
+        <h2>What should you pay attention to?</h2>
+        
+        <div class="guidelines-grid">
+          <div class="guideline-card">
+            <div class="guideline-icon">🔒</div>
+            <h3>Confidentiality</h3>
+            <p><strong>Don't tell anyone else about it.</strong> Keep the vulnerability confidential until we've had sufficient time to develop and publish a fix.</p>
+          </div>
+          <div class="guideline-card">
+            <div class="guideline-icon">🗑️</div>
+            <h3>Data Clean-up</h3>
+            <p><strong>Destroy data you have obtained.</strong> Once you've confirmed the vulnerability, safely dispose of any sensitive data you may have accessed during the testing process.</p>
+          </div>
+          <div class="guideline-card">
+            <div class="guideline-icon">⚖️</div>
+            <h3>Scope Limitation</h3>
+            <p><strong>Do not go further than necessary to prove the problem.</strong> Testing should be limited to demonstrating the vulnerability without causing unnecessary impact.</p>
+          </div>
+          <div class="guideline-card">
+            <div class="guideline-icon">⚠️</div>
+            <h3>No Exploitation</h3>
+            <p><strong>Do not abuse the security breach or we will be forced to file a report.</strong> Misuse of vulnerabilities may result in legal action.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scope-section">
+      <div class="container">
+        <h2>What can you report?</h2>
+        
+        <div class="scope-content">
+          <h3>Examples of reportable vulnerabilities:</h3>
+          <ul class="vulnerability-list">
+            <li>Remote Code Execution</li>
+            <li>Cross Site Scripting (XSS) vulnerabilities</li>
+            <li>Cross Site Request Forgery (CSRF) vulnerabilities</li>
+            <li>SQL injection vulnerabilities</li>
+            <li>Vulnerabilities related to encryption</li>
+            <li>Unintended publication of sensitive data</li>
+            <li>Security misconfiguration</li>
+            <li>Unauthorized access to data</li>
+          </ul>
+        </div>
+
+        <div class="scope-content">
+          <h3>What you don't have to report (out of scope):</h3>
+          <p class="scope-intro">The following items fall outside the scope of our vulnerability disclosure program:</p>
+          
+          <div class="out-of-scope-grid">
+            <div class="out-of-scope-item">
+              <h4>Social Engineering</h4>
+              <p>Phishing, pretexting, baiting and similar techniques.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Resource & DoS Attacks</h4>
+              <p>Resource attrition and (Distributed) Denial of Service attacks.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Physical Attacks</h4>
+              <p>Physical attacks or unauthorized in-person access.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Non-reproducible Issues</h4>
+              <p>Situations that are not reproducible or whose impact has not been demonstrated to be reproducible.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Unvalidated Findings</h4>
+              <p>Vulnerabilities that have not been validated with a second method or tool (e.g., tool A detects vulnerability, tool B does not).</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Cosmetic Issues</h4>
+              <p>Layout differences between browsers. Report via webmaster@defenseacademy.eu if necessary.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>User Behavior</h4>
+              <p>Leaving workstations unattended, clicking on links or using key combinations.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Port/Service Listings</h4>
+              <p>Simple listings of ports, services or version numbers without further context or abuse scenario.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Public Files</h4>
+              <p>Public files or directories that do not contain confidential information and should be publicly available.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Non-sensitive Cookies</h4>
+              <p>Missing HTTP-only or Secure flags on cookies that do not contain sensitive information.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>TLS/SSL Configuration</h4>
+              <p>TLS/SSL configuration issues with no working proof-of-concept or no demonstrable impact (e.g., SSL Forward Secrecy disabled).</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Missing Security Headers</h4>
+              <p>Missing HTTP security headers (X-Frame-Options, X-XSS-Protection, X-Content-Type-Options, Content-Security-Policy, Strict-Transport-Security).</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>OPTIONS Method</h4>
+              <p>OPTIONS HTTP method available without evidence of abuse.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>URL Redirects</h4>
+              <p>URL redirects to legitimate and valid pages.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Clickjacking</h4>
+              <p>Clickjacking or content spoofing with no obvious security impact.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Local Spoofing</h4>
+              <p>Local content spoofing or text injection on error pages (such as 404s) without sensitive interaction.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Host Header Injection</h4>
+              <p>Host Header Injection with no evidence of abuse.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>DNS Records</h4>
+              <p>Missing or incorrect SPF, DKIM, DMARC or CAA DNS records without demonstrable impact.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Fingerprinting</h4>
+              <p>Fingerprinting or version information of public services without known vulnerability or exploitability.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Outdated Software</h4>
+              <p>Outdated software versions without publicly known exploits or without working exploitation in context of our system.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Browser/Platform Issues</h4>
+              <p>Issues occurring only when using outdated or unpatched browsers or platforms on the user side.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Hardening Absence</h4>
+              <p>Absence of hardening or security best practices without direct vulnerability (e.g., xmlrpc.php on WordPress, absence of rate-limiting).</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Unrealistic Interactions</h4>
+              <p>Issues requiring improbable or unrealistic user interaction.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Low-Impact CSRF</h4>
+              <p>Cross-site Request Forgery (CSRF) with minimal or no security impact.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Third-Party Services</h4>
+              <p>Services running at external third parties; reports should go through their own responsible disclosure process.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>External Breaches</h4>
+              <p>Information from data breaches at external parties, such as email addresses found through public breaches.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Recent Patches</h4>
+              <p>Vulnerabilities for which patches are available for less than 14 days.</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Known Protocol Issues</h4>
+              <p>Known problems with protocols or technologies not in our management domain (e.g., ARP, HL7).</p>
+            </div>
+            <div class="out-of-scope-item">
+              <h4>Duplicates</h4>
+              <p>Duplicates of previously reported vulnerabilities; only the first report will be addressed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="known-issues-section">
+      <div class="container">
+        <h2>Known problems</h2>
+        <p>There are also problems that are already known to us and that we are working on or recognize as accepted risks. We do not name these problems on the website. However, our support team is aware of them and will indicate them. As a result, the issue will not be addressed.</p>
+      </div>
+    </section>
+
+    <section class="security-txt-section">
+      <div class="container">
+        <h2>Security.txt</h2>
+        <p>With the publication of RFC 9116, a unified way is now available for organizations to publish their vulnerability disclosure policies and contacts. To that end, a text format was devised that is readable by both machines and humans and published on the website in the security.txt file.</p>
+        <p>Our security.txt file can be found here: <a href="https://www.DefenseAcademy.eu/.well-known/security.txt" target="_blank" rel="noopener noreferrer">https://www.DefenseAcademy.eu/.well-known/security.txt</a></p>
+      </div>
+    </section>
+
+    <section class="agreement-section">
+      <div class="container">
+        <h2>Agree?</h2>
+        <div class="agreement-content">
+          <p>By submitting your finding to DefenseAcademy, you acknowledge that you have read and agree to our terms and conditions. You also represent to us that you are the sole creator of the submission and hereby grant us permission to use, reproduce, copy, modify and dispose of your submission in any manner we determine. You also agree that you may not use your submission for marketing or financing purposes or as a reference in any personal or professional presentation, documentation or other material and that you may not use in any way (either on the Internet or through any other means of communication) our trade name, company name, logo or trademark.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Defense Academy. All rights reserved.</p>
+      <p>Found a security issue? Please <a href="https://defenseacademy.eu/#contact">Contact us</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

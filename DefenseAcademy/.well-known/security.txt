@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@defenseacademy.eu
+Expires: 2026-10-01T21:59:00Z
+Encryption: https://defenseacademy.eu/.well-known/pgpkey.txt
+Preferred-Languages: en
+Canonical: https://defenseacademy.eu/.well-known/security.txt
+Policy: https://defenseacademy.eu/security/disclosure-policy.html
+-----BEGIN PGP SIGNATURE-----
+
+iQJPBAEBCAA5FiEE/jf5QC2aZx5oc3CwcMKyByH3U+4FAmmolTEbFIAAAAAABAAO
+bWFudTIsMi41KzEuMTEsMiwxAAoJEHDCsgch91PufVoP/i4nfnbEA2Xuf27px9q+
+LvWtwt54NXrIC7v/mxLmkdnGkinpAy2oufhRUOqOM5eVvoKcqc6NVmgNNAfoC9Ex
+KQyfSzOSBW+PE5OadOqhiHdV+yExm5Zys4jFAMN1nbqt5PU0Gv9JMEiH3UcKn6Hg
+eI/l/Z5ohxA1pNjAKJblYm/81KVODZmxK8w2uDZQW8kkY77V89AvHnGCjHT5HRrE
+BKZuXHPNlWZFrHXs67EHG5onJ2LdLuG87duLi7FBveDXEKWfEG1xJp3OD7BoSBbR
+TjI9x/Tjxf3o3nwL/TunFxreNTkk8AFRAfWFpzdZrDeePi1zVnp835EMCAiNa85r
+l5Qun2rC4otOqjFEjiYHixw0hK/se7VluzWVLeqVGoakz8HMh2ehapE/Usdrh6WH
+f95BAR1YwgXJtvjeS8d1orxw2aWxTd0Wn72HhqRL9Ot4sGViw9yN9xZis1rg64yZ
+vvxb81HCWO4wbznMDzpYsbdvfsquQ3DlzgantxaEcwJtXLCIK5SquFMr95Qc39HN
+dg189sACL91lTdLLHJdbQuD+bf2stxMCEgkQc0kYVzF32Fu7CsLVkLXMg4OHISoo
+mw6VJXM6jpMNGg1/U24r+zG5TUq3rzCcN0rtInHiOmBwg9GrpUVs8W76b1F2avgE
+vrM5c0SR8mOiNMLNb2Jzmm04
+=zQnN
+-----END PGP SIGNATURE-----
