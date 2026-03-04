@@ -1054,7 +1054,7 @@ a:focus-visible {
 
   .services-list li {
     font-size: var(--text-base);
-    padding: var(--space-3) 0;
+    padding: var(--space-3) 0 var(--space-3) var(--space-6);
   }
 
   .testimonial-card {
