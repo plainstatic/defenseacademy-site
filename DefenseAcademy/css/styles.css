@@ -1064,6 +1064,11 @@ a:focus-visible {
   .testimonial-card blockquote {
     font-size: var(--text-lg);
   }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
 }
 
 /* ============================================
