@@ -7,7 +7,6 @@ Encryption: https://defenseacademy.eu/.well-known/pgpkey.txt
 Preferred-Languages: en
 Canonical: https://defenseacademy.eu/.well-known/security.txt
 Policy: https://defenseacademy.eu/security/disclosure-policy.html
-
 -----BEGIN PGP SIGNATURE-----
 
 iQJPBAEBCAA5FiEE/jf5QC2aZx5oc3CwcMKyByH3U+4FAmmolTEbFIAAAAAABAAO
