@@ -14,8 +14,13 @@
   --muted: #8a92a0;
   --primary: #1e3a5f;
   --primary-light: #2d5a8c;
-  --secondary: #f97316;
-  --secondary-dark: #ea580c;
+  --secondary: #feab00;
+  --secondary-dark: #d69200;
+  --secondary-contrast: #feab00;
+  --secondary-contrast-dark: #d69200;
+  --secondary-link: #7a4f00;
+  --secondary-link-dark: #5f3d00;
+  --focus-ring: #d69200;
   --border: #1a2738;
   --shadow: rgba(0, 0, 0, 0.4);
   --shadow-lg: rgba(0, 0, 0, 0.6);
@@ -135,7 +140,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
   border-radius: var(--radius-xs);
 }
@@ -362,21 +367,23 @@ main:focus {
 }
 
 .nav-cta {
-  background: var(--secondary);
-  color: white !important;
+  background: var(--secondary-contrast);
+  color: #000000 !important;
   padding: var(--space-2) var(--space-6);
   border-radius: var(--radius-md);
   font-weight: 600;
 }
 
 .nav-cta:hover {
-  background: var(--secondary-dark);
+  background: var(--secondary-contrast-dark);
+  color: #000000 !important;
+  box-shadow: 0 8px 18px rgba(254, 171, 0, 0.22);
 }
 
 .nav-link:focus-visible,
 .nav-cta:focus-visible,
 .navbar-logo:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 4px;
 }
 
@@ -403,7 +410,7 @@ main:focus {
 }
 
 .nav-toggle:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 4px;
   border-radius: var(--radius-sm);
 }
@@ -510,20 +517,20 @@ main:focus {
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--secondary);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
 .btn-primary {
-  background: var(--secondary);
-  color: white;
+  background: var(--secondary-contrast);
+  color: #000000;
 }
 
 .btn-primary:hover {
-  background: var(--secondary-dark);
-  color: white;
+  background: var(--secondary-contrast-dark);
+  color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 8px 20px rgba(254, 171, 0, 0.3);
 }
 
 .btn-secondary {
@@ -736,8 +743,8 @@ main:focus {
 
 .course-badge {
   display: inline-block;
-  background: var(--secondary);
-  color: white;
+  background: var(--secondary-contrast);
+  color: #000000;
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);
@@ -773,20 +780,22 @@ main:focus {
 }
 
 .course-link {
-  color: var(--secondary);
+  color: var(--secondary-link);
   font-weight: 600;
   text-decoration: none;
   transition: color var(--transition-base);
   font-size: var(--text-sm);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
 }
 
 .course-link:hover {
-  color: #ea580c;
+  color: var(--secondary-link-dark);
   text-decoration: underline;
 }
 
 .course-link:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
 }
 
