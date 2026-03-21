@@ -73,6 +73,13 @@
   html {
     scroll-behavior: auto !important;
   }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0ms !important;
+  }
 }
 
 /* ============================================
@@ -128,9 +135,30 @@ a {
 }
 
 a:focus-visible {
-  outline: 2px solid var(--secondary);
-  outline-offset: 2px;
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
   border-radius: var(--radius-xs);
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: var(--space-4);
+  transform: translateY(-200%);
+  background: #ffffff;
+  color: #000a15;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  z-index: 1001;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 .container {
@@ -180,6 +208,7 @@ a:focus-visible {
 .logo {
   height: 44px;
   width: auto;
+  display: block;
 }
 
 .brand-name {
@@ -217,89 +246,6 @@ a:focus-visible {
 /* ============================================
    9. Contact form (footer)
    ============================================ */
-
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.contact-form h3 {
-  font-size: var(--text-4xl);
-  color: var(--text);
-  text-align: center;
-  margin-bottom: var(--space-4);
-}
-
-.field-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form label {
-  font-size: var(--text-sm);
-  margin-bottom: var(--space-1);
-  color: var(--text-secondary);
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  padding: var(--space-3);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background-color: var(--surface-2);
-  color: var(--text);
-  font-size: var(--text-base);
-  transition: all var(--transition-base);
-  font-family: inherit;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: var(--muted);
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--secondary);
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
-}
-
-.privacy-text {
-  font-size: var(--text-xs);
-  color: var(--text-secondary);
-  line-height: var(--leading-normal);
-}
-
-.privacy-text a {
-  color: var(--secondary);
-  text-decoration: underline;
-}
-
-.contact-form .btn {
-  align-self: flex-start;
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 500px; /* match contact-form width */
-  margin: var(--space-4) auto 0;
-  padding: 0; /* remove extra horizontal padding so edges line up with form */
-  color: var(--text-secondary);
-  font-size: var(--text-sm);
-}
-
-.footer-bottom .footer-left,
-.footer-bottom .footer-right {
-  display: inline-block;
-}
 
 /* Additional sections */
 .approach-section,
@@ -400,10 +346,6 @@ a:focus-visible {
   flex: 0 0 auto;
 }
 
-
-
-}
-
 .nav-link::after {
   content: '';
   position: absolute;
@@ -431,6 +373,13 @@ a:focus-visible {
   background: var(--secondary-dark);
 }
 
+.nav-link:focus-visible,
+.nav-cta:focus-visible,
+.navbar-logo:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 4px;
+}
+
 .nav-cta::after {
   display: none;
 }
@@ -451,6 +400,12 @@ a:focus-visible {
   background: white;
   border-radius: 2px;
   transition: all var(--transition-base);
+}
+
+.nav-toggle:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
 }
 
 /* Mobile nav toggle state */
@@ -479,6 +434,12 @@ a:focus-visible {
   overflow: hidden;
 }
 
+.hero-media {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
 .hero-image {
   position: absolute;
   top: 0;
@@ -486,6 +447,7 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   z-index: 0;
 }
 
@@ -679,7 +641,7 @@ a:focus-visible {
   box-shadow: 0 8px 20px var(--shadow-lg);
 }
 
-.services-list strong {
+.services-list h3 {
   color: #ffffff;
   font-size: var(--text-lg);
   font-weight: 700;
@@ -805,7 +767,7 @@ a:focus-visible {
 
 .course-duration {
   font-size: var(--text-xs);
-  color: var(--muted);
+  color: #374151;
   margin-bottom: var(--space-6);
   margin-top: auto;
 }
@@ -821,6 +783,11 @@ a:focus-visible {
 .course-link:hover {
   color: #ea580c;
   text-decoration: underline;
+}
+
+.course-link:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
 }
 
 /* CTA Section styling */
@@ -859,6 +826,23 @@ a:focus-visible {
   margin-bottom: var(--space-12);
 }
 
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin: var(--space-4) auto 0;
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-sm);
+}
+
+.footer-bottom .footer-left,
+.footer-bottom .footer-right {
+  display: inline-block;
+}
+
 .footer-section h3 {
   color: #fff;
   font-size: var(--text-lg);
@@ -885,14 +869,6 @@ a:focus-visible {
 
 .footer-section a:hover {
   color: var(--secondary);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: var(--space-8);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
-  font-size: var(--text-sm);
 }
 
 /* ============================================
@@ -1024,6 +1000,11 @@ a:focus-visible {
   .footer-content {
     gap: var(--space-8);
   }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
 }
 
 /* Extra small (479px and below) */
@@ -1065,326 +1046,9 @@ a:focus-visible {
     font-size: var(--text-lg);
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    gap: var(--space-4);
-  }
 }
 
-/* ============================================
-   RESPONSIBLE DISCLOSURE STYLES
-   ============================================ */
-
-.disclosure-section,
-.reporting-section,
-.guidelines-section,
-.scope-section,
-.known-issues-section,
-.security-txt-section,
-.agreement-section {
-  padding: var(--space-24) 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.disclosure-section {
-  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
-}
-
-.section-intro {
-  font-size: var(--text-lg);
-  line-height: var(--leading-normal);
-  color: var(--text);
-  margin-bottom: var(--space-12);
-}
-
-/* Reporting Section */
-.reporting-section h2 {
-  margin-bottom: var(--space-8);
-}
-
-.reporting-section > .container > p {
-  margin-bottom: var(--space-8);
-  color: var(--text-secondary);
-}
-
-.disclosure-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-12);
-  margin-top: var(--space-12);
-}
-
-.disclosure-item {
-  display: flex;
-  gap: var(--space-8);
-  padding: var(--space-8);
-  background: var(--surface-2);
-  border-left: 4px solid var(--secondary);
-  border-radius: 8px;
-}
-
-.disclosure-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: var(--secondary);
-  color: var(--bg);
-  font-weight: 700;
-  font-size: var(--text-lg);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.disclosure-content h3 {
-  margin-bottom: var(--space-4);
-  color: var(--text);
-}
-
-.disclosure-content p {
-  color: var(--text-secondary);
-  line-height: var(--leading-normal);
-}
-
-/* Guidelines Section */
-.guidelines-section h2 {
-  margin-bottom: var(--space-12);
-}
-
-.guidelines-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-8);
-  margin-top: var(--space-8);
-}
-
-.guideline-card {
-  padding: var(--space-8);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  transition: all var(--transition-duration, 0.3s) ease;
-}
-
-.guideline-card:hover {
-  border-color: var(--secondary);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.1);
-}
-
-.guideline-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-4);
-  display: block;
-}
-
-.guideline-card h3 {
-  margin-bottom: var(--space-4);
-  color: var(--text);
-  font-size: var(--text-lg);
-}
-
-.guideline-card p {
-  color: var(--text-secondary);
-  line-height: var(--leading-normal);
-}
-
-.guideline-card strong {
-  color: var(--secondary);
-}
-
-/* Scope Section */
-.scope-section h2 {
-  margin-bottom: var(--space-12);
-}
-
-.scope-content {
-  margin-bottom: var(--space-16);
-}
-
-.scope-content h3 {
-  margin-bottom: var(--space-8);
-  font-size: var(--text-xl);
-  color: var(--text);
-}
-
-.scope-intro {
-  margin-bottom: var(--space-8);
-  color: var(--text-secondary);
-}
-
-.vulnerability-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-4);
-}
-
-.vulnerability-list li {
-  padding: var(--space-4) var(--space-6);
-  background: var(--surface-2);
-  border-left: 3px solid var(--secondary);
-  color: var(--text);
-  border-radius: 4px;
-}
-
-.out-of-scope-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-8);
-  margin-top: var(--space-8);
-}
-
-.out-of-scope-item {
-  padding: var(--space-8);
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-
-.out-of-scope-item h4 {
-  margin-bottom: var(--space-4);
-  color: var(--text);
-  font-size: var(--text-base);
-}
-
-.out-of-scope-item p {
-  color: var(--text-secondary);
-  font-size: var(--text-sm);
-  line-height: var(--leading-normal);
-  margin: 0;
-}
-
-/* Known Issues Section */
-.known-issues-section {
-  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
-}
-
-.known-issues-section h2 {
-  margin-bottom: var(--space-8);
-}
-
-.known-issues-section p {
-  color: var(--text-secondary);
-  line-height: var(--leading-normal);
-  font-size: var(--text-lg);
-}
-
-/* Security.txt Section */
-.security-txt-section h2 {
-  margin-bottom: var(--space-8);
-}
-
-.security-txt-section p {
-  color: var(--text-secondary);
-  line-height: var(--leading-normal);
-  margin-bottom: var(--space-6);
-}
-
-.security-txt-section a {
-  color: var(--secondary);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.security-txt-section a:hover {
-  text-decoration: underline;
-}
-
-/* Agreement Section */
-.agreement-section {
-  background: linear-gradient(135deg, rgba(30, 58, 95, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
-}
-
-.agreement-section h2 {
-  margin-bottom: var(--space-8);
-  color: var(--text);
-}
-
-.agreement-content {
-  padding: var(--space-12);
-  background: var(--surface-2);
-  border-left: 4px solid var(--secondary);
-  border-radius: 8px;
-}
-
-.agreement-content p {
-  color: var(--text-secondary);
-  line-height: var(--leading-normal);
-  margin: 0;
-}
-
-/* Footer */
-.footer {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  padding: var(--space-12) 0;
-  margin-top: var(--space-24);
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-8);
-  text-align: center;
-  color: var(--text-secondary);
-  font-size: var(--text-sm);
-}
-
-.footer-content p {
-  margin: var(--space-2) 0;
-}
-
-.footer-content a {
-  color: var(--secondary);
-  text-decoration: none;
-}
-
-.footer-content a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive - Disclosure Section */
-@media (max-width: 768px) {
-  .disclosure-section,
-  .reporting-section,
-  .guidelines-section,
-  .scope-section,
-  .known-issues-section,
-  .security-txt-section,
-  .agreement-section {
-    padding: var(--space-16) 0;
-  }
-
-  .disclosure-item {
-    flex-direction: column;
-    gap: var(--space-6);
-  }
-
-  .disclosure-number {
-    width: 40px;
-    height: 40px;
-    font-size: var(--text-base);
-  }
-
-  .guidelines-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .vulnerability-list {
-    grid-template-columns: 1fr;
-  }
-
-  .out-of-scope-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .agreement-content {
-    padding: var(--space-8);
-  }
-
+@media (max-width: 767px) {
   /* Hero buttons stack spacing */
   .hero-content .btn + .btn {
     margin-top: var(--space-4);

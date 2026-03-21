@@ -1,0 +1,103 @@
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact-form h2 {
+  font-size: var(--text-4xl);
+  color: var(--text);
+  text-align: center;
+  margin-bottom: var(--space-2);
+}
+
+.form-intro,
+.form-status {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.form-intro {
+  text-align: center;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status[data-state="error"] {
+  color: #ffd5c2;
+}
+
+.field-help {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+.honeypot-field {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-1);
+  color: var(--text-secondary);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-2);
+  color: var(--text);
+  font-size: var(--text-base);
+  transition: all var(--transition-base);
+  font-family: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
+}
+
+.privacy-text {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+}
+
+.privacy-text a {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+}
