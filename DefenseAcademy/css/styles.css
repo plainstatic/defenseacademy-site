@@ -24,6 +24,12 @@
   --border: #1a2738;
   --shadow: rgba(0, 0, 0, 0.4);
   --shadow-lg: rgba(0, 0, 0, 0.6);
+  --button-hover-bg: #000000;
+  --button-hover-text: #ffffff;
+  --button-hover-border: #000000;
+  --contact-hover-bg: #ffffff;
+  --contact-hover-text: #000000;
+  --contact-hover-border: #ffffff;
 
   /* Spacing Scale */
   --space-1: 0.25rem;
@@ -372,12 +378,16 @@ main:focus {
   padding: var(--space-2) var(--space-6);
   border-radius: var(--radius-md);
   font-weight: 600;
+  border: 1px solid transparent;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-.nav-cta:hover {
-  background: var(--secondary-contrast-dark);
-  color: #000000 !important;
-  box-shadow: 0 8px 18px rgba(254, 171, 0, 0.22);
+.btn-contact:hover,
+.btn-contact:focus-visible {
+  background: var(--contact-hover-bg);
+  color: var(--contact-hover-text) !important;
+  border-color: var(--contact-hover-border);
+  box-shadow: 0 8px 18px rgba(255, 255, 255, 0.18);
 }
 
 .nav-link:focus-visible,
@@ -511,7 +521,8 @@ main:focus {
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
-  transition: all var(--transition-base);
+  border: 1px solid transparent;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
   white-space: nowrap;
   text-align: center;
 }
@@ -521,16 +532,24 @@ main:focus {
   outline-offset: 2px;
 }
 
+.btn:hover,
+.btn:focus-visible {
+  background: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  border-color: var(--button-hover-border);
+}
+
 .btn-primary {
   background: var(--secondary-contrast);
   color: #000000;
 }
 
 .btn-primary:hover {
-  background: var(--secondary-contrast-dark);
-  color: #000000;
+  background: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  border-color: var(--button-hover-border);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(254, 171, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 }
 
 .btn-secondary {
@@ -540,8 +559,9 @@ main:focus {
 }
 
 .btn-secondary:hover {
-  background: var(--primary);
-  color: white;
+  background: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  border-color: var(--button-hover-border);
 }
 
 /* ============================================
